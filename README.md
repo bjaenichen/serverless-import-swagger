@@ -41,6 +41,10 @@ Usage: sis [options]
     # CORS and OPTIONS method settings.
     -C, --cors                     If add this option, added cors setting to all http event.
     -O, --options-method           If add this option, added cors setting to get http event, and added OPTIONS method to api path that including other http method.
+    
+    # import options
+    -H, --handler', 'Override default handler.{functionName} with fixed value.
+    -s, --serverless', 'Generate serverless file only.
 ```
 
 Example

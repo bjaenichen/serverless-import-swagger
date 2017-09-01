@@ -8,6 +8,10 @@ const appRoot = require('app-root-path');
 module.exports = (config, options) => Promise.resolve()
 .then(() => new Promise((resolve, reject) => {
   var dirName = options.servicePrefix ? config.service.slice(options.servicePrefix.length + 1) : config.service;
+  if (options.configOnly) {
+      dirName = './';
+  }
+
   var filePath = path.resolve(appRoot.path, options.outDir, dirName, './serverless.yml');
 
   fs.writeFile(filePath, jsyaml.safeDump(config), 'utf8', (error) => {
