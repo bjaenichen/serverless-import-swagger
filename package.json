@@ -29,13 +29,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AKIRA-MIYAKE/serverless-import-swagger.git"
+    "url": "git+https://github.com/bjaenichen/serverless-import-swagger.git"
   },
   "keywords": [],
-  "author": "AKIRA-MIYAKE",
+  "author": "bjaenichen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AKIRA-MIYAKE/serverless-import-swagger/issues"
+    "url": "https://github.com/bjaenichen/serverless-import-swagger.git"
   },
-  "homepage": "https://github.com/AKIRA-MIYAKE/serverless-import-swagger#readme"
+  "homepage": "https://github.com/bjaenichen/serverless-import-swagger#readme"
 }
