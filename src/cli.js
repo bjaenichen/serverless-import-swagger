@@ -28,7 +28,7 @@ module.exports.exec = () => {
   .option('-C, --cors', 'If add this option, added cors setting to all http event.')
   .option('-O, --options-method', 'If add this option, added cors setting to get http event, and added OPTIONS method to api path that including other http method.')
   // import options
-  .option('-H, --handler', 'Override default handler.{functionName} with fixed value.')
+  .option('-H, --handler <path>', 'Override default handler.{functionName} with fixed value.')
   .option('-s, --serverless', 'Generate serverless file only.')
   .parse(process.argv);
 
@@ -53,7 +53,7 @@ module.exports.exec = () => {
     .then(common => Promise.all(
       convertedConfigs
       .map(converted => Promise.resolve()
-        .then(() => (!options.configOnly ? generateServiceIfNeed(converted, options) : Promise.resolve()))
+        .then(() => (!options.configOnly ? generateServiceIfNeed(converted, options) : converted))
         .then(converted => loadExistsConfig(converted, options))
         .then(([converted, exists]) => [converted, exists, common])
         .then(configs => mergeConfigs(...configs, options))
